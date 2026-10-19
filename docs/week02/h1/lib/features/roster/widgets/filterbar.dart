@@ -72,7 +72,7 @@ class ElementFilterBar extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                 decoration: BoxDecoration(
                   color: isSelected
-                      ? color.withOpacity(isDark ? 0.25 : 0.15)
+                      ? color.withValues(alpha: isDark ? 0.25 : 0.15)
                       : (isDark ? const Color(0xFF131A29) : const Color(0xFFF1F5F9)),
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
@@ -84,7 +84,7 @@ class ElementFilterBar extends StatelessWidget {
                   boxShadow: isSelected
                       ? [
                           BoxShadow(
-                            color: color.withOpacity(0.3),
+                            color: color.withValues(alpha: 0.3),
                             blurRadius: 8,
                           ),
                         ]

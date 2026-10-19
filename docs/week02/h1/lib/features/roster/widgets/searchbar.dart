@@ -22,7 +22,7 @@ class CharacterSearchBar extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
           boxShadow: [
             BoxShadow(
-              color: isDark ? Colors.black.withOpacity(0.3) : Colors.amber.withOpacity(0.08),
+              color: isDark ? Colors.black.withValues(alpha: 0.3) : Colors.amber.withValues(alpha: 0.08),
               blurRadius: 8,
               offset: const Offset(0, 2),
             ),

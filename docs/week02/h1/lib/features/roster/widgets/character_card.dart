@@ -83,30 +83,30 @@ class _CharacterCardState extends State<CharacterCard> {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
         curve: Curves.easeOutCubic,
-        transform: _isHovered ? (Matrix4.identity()..scale(1.04)..translate(0, -6, 0)) : Matrix4.identity(),
+        transform: _isHovered ? Matrix4.translationValues(0.0, -4.0, 0.0) : Matrix4.identity(),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(12),
           boxShadow: [
             BoxShadow(
               color: _isHovered
-                  ? elementColor.withOpacity(0.5)
-                  : (isDark ? Colors.black.withOpacity(0.4) : Colors.black.withOpacity(0.08)),
-              blurRadius: _isHovered ? 20 : 8,
-              offset: Offset(0, _isHovered ? 8 : 4),
+                  ? elementColor.withValues(alpha: 0.5)
+                  : (isDark ? Colors.black.withValues(alpha: 0.4) : Colors.black.withValues(alpha: 0.08)),
+              blurRadius: _isHovered ? 14 : 6,
+              offset: Offset(0, _isHovered ? 6 : 3),
             ),
           ],
         ),
         child: Card(
-          elevation: _isHovered ? 8 : 3,
+          elevation: _isHovered ? 6 : 2,
           margin: EdgeInsets.zero,
           clipBehavior: Clip.antiAlias,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(12),
             side: BorderSide(
               color: _isHovered
                   ? elementColor
                   : (isDark ? const Color(0xFF2A344B) : const Color(0xFFE2D9C5)),
-              width: _isHovered ? 2 : 1.2,
+              width: _isHovered ? 1.5 : 1.0,
             ),
           ),
           child: InkWell(
@@ -134,7 +134,7 @@ class _CharacterCardState extends State<CharacterCard> {
                           ),
                           child: const Icon(
                             Icons.shield,
-                            size: 48,
+                            size: 36,
                             color: Colors.white60,
                           ),
                         ),
@@ -147,9 +147,9 @@ class _CharacterCardState extends State<CharacterCard> {
                               begin: Alignment.topCenter,
                               end: Alignment.bottomCenter,
                               colors: [
-                                Colors.black.withOpacity(0.2),
+                                Colors.black.withValues(alpha: 0.2),
                                 Colors.transparent,
-                                Colors.black.withOpacity(0.85),
+                                Colors.black.withValues(alpha: 0.85),
                               ],
                               stops: const [0.0, 0.4, 1.0],
                             ),
@@ -158,34 +158,34 @@ class _CharacterCardState extends State<CharacterCard> {
                       ),
                       // Top Left: 5-Star Mythic Rating Badge
                       Positioned(
-                        top: 8,
-                        left: 8,
+                        top: 4,
+                        left: 4,
                         child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+                          padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1.5),
                           decoration: BoxDecoration(
                             gradient: const LinearGradient(
                               colors: [Color(0xFFD97706), Color(0xFFFBBF24)],
                             ),
-                            borderRadius: BorderRadius.circular(6),
+                            borderRadius: BorderRadius.circular(4),
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.black.withOpacity(0.4),
-                                blurRadius: 4,
+                                color: Colors.black.withValues(alpha: 0.4),
+                                blurRadius: 3,
                               ),
                             ],
                           ),
                           child: const Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              Icon(Icons.star, size: 10, color: Colors.white),
-                              SizedBox(width: 2),
+                              Icon(Icons.star, size: 8, color: Colors.white),
+                              SizedBox(width: 1),
                               Text(
                                 '5★',
                                 style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 10,
+                                  fontSize: 8,
                                   fontWeight: FontWeight.w900,
-                                  letterSpacing: 0.5,
+                                  letterSpacing: 0.3,
                                 ),
                               ),
                             ],
@@ -194,27 +194,27 @@ class _CharacterCardState extends State<CharacterCard> {
                       ),
                       // Top Right: Elemental Icon Badge with Metallic Border
                       Positioned(
-                        top: 8,
-                        right: 8,
+                        top: 4,
+                        right: 4,
                         child: Container(
-                          padding: const EdgeInsets.all(6),
+                          padding: const EdgeInsets.all(3),
                           decoration: BoxDecoration(
-                            color: const Color(0xFF0F172A).withOpacity(0.85),
+                            color: const Color(0xFF0F172A).withValues(alpha: 0.85),
                             shape: BoxShape.circle,
                             border: Border.all(
                               color: elementColor,
-                              width: 1.5,
+                              width: 1.0,
                             ),
                             boxShadow: [
                               BoxShadow(
-                                color: elementColor.withOpacity(0.4),
-                                blurRadius: 6,
+                                color: elementColor.withValues(alpha: 0.4),
+                                blurRadius: 3,
                               ),
                             ],
                           ),
                           child: Icon(
                             elementIcon,
-                            size: 14,
+                            size: 9,
                             color: elementColor,
                           ),
                         ),
@@ -224,13 +224,13 @@ class _CharacterCardState extends State<CharacterCard> {
                 ),
                 // Bottom Card Information Section
                 Container(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 4.0),
                   decoration: BoxDecoration(
                     color: isDark ? const Color(0xFF131927) : const Color(0xFFFAFAFA),
                     border: Border(
                       top: BorderSide(
-                        color: elementColor.withOpacity(0.3),
-                        width: 1.5,
+                        color: elementColor.withValues(alpha: 0.3),
+                        width: 1.0,
                       ),
                     ),
                   ),
@@ -242,42 +242,42 @@ class _CharacterCardState extends State<CharacterCard> {
                         name,
                         style: theme.textTheme.titleMedium?.copyWith(
                           fontWeight: FontWeight.w800,
-                          fontSize: 14,
-                          letterSpacing: 0.2,
+                          fontSize: 10.5,
+                          letterSpacing: 0.1,
                         ),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),
-                      const SizedBox(height: 6),
+                      const SizedBox(height: 3),
                       // Element & Role Pill
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                        padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1.5),
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
                             colors: [
-                              elementGradient[0].withOpacity(isDark ? 0.6 : 0.15),
-                              elementGradient[1].withOpacity(isDark ? 0.4 : 0.10),
+                              elementGradient[0].withValues(alpha: isDark ? 0.6 : 0.15),
+                              elementGradient[1].withValues(alpha: isDark ? 0.4 : 0.10),
                             ],
                           ),
-                          borderRadius: BorderRadius.circular(6),
+                          borderRadius: BorderRadius.circular(4),
                           border: Border.all(
-                            color: elementColor.withOpacity(0.4),
-                            width: 1,
+                            color: elementColor.withValues(alpha: 0.4),
+                            width: 0.8,
                           ),
                         ),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Icon(elementIcon, size: 12, color: elementColor),
-                            const SizedBox(width: 4),
+                            Icon(elementIcon, size: 8, color: elementColor),
+                            const SizedBox(width: 2),
                             Flexible(
                               child: Text(
                                 '${element.toUpperCase()} • $role',
                                 style: TextStyle(
-                                  fontSize: 10,
+                                  fontSize: 8,
                                   fontWeight: FontWeight.w800,
                                   color: isDark ? elementColor : elementGradient[0],
-                                  letterSpacing: 0.5,
+                                  letterSpacing: 0.2,
                                 ),
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,

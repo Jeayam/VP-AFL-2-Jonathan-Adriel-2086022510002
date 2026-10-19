@@ -22,12 +22,12 @@ class RosterEmptyState extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: isDark ? const Color(0xFF131A29) : const Color(0xFFFEF3C7),
                 border: Border.all(
-                  color: const Color(0xFFEAB308).withOpacity(0.5),
+                  color: const Color(0xFFEAB308).withValues(alpha: 0.5),
                   width: 2,
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: const Color(0xFFEAB308).withOpacity(0.25),
+                    color: const Color(0xFFEAB308).withValues(alpha: 0.25),
                     blurRadius: 20,
                   ),
                 ],

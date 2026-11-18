@@ -1,0 +1,6 @@
+[
+  {"id": "fire", "name": "Fire"},
+  {"id": "water", "name": "Water"},
+  {"id": "lightning", "name": "Lightning"},
+  {"id": "dark", "name": "Dark"}
+]

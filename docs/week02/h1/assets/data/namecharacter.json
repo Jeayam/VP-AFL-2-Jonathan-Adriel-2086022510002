@@ -1,0 +1,58 @@
+[
+  {
+    "id": "kaelen",
+    "name": "Kaelen",
+    "elementId": "fire",
+    "roleId": "dps",
+    "imageUrl": "assets/charactercard/Kaelan.jpg"
+  },
+  {
+    "id": "aria",
+    "name": "Aria",
+    "elementId": "water",
+    "roleId": "support",
+    "imageUrl": "assets/charactercard/water.jpg"
+  },
+  {
+    "id": "sol",
+    "name": "Sol",
+    "elementId": "fire",
+    "roleId": "striker",
+    "imageUrl": "assets/charactercard/fireboy.jpg"
+  },
+  {
+    "id": "nyx",
+    "name": "Nyx",
+    "elementId": "dark",
+    "roleId": "assassin",
+    "imageUrl": "assets/charactercard/Nyx.jpg"
+  },
+  {
+    "id": "valerius",
+    "name": "Archmage Valerius Ignis Highflame the Third Commander of the Elemental Citadel and Guardian of the Eternal Sacred Spark of Eldoria",
+    "elementId": "fire",
+    "roleId": "mage",
+    "imageUrl": "assets/charactercard/fireboy.jpg"
+  },
+  {
+    "id": "aurelia",
+    "name": "Princess Aurelia Hydroina Tidecaller Empress of the Seven Oceanic Realm Waters and Protector of Abyssal Sanctuary Depths",
+    "elementId": "water",
+    "roleId": "supremeSupport",
+    "imageUrl": "assets/charactercard/water.jpg"
+  },
+  {
+    "id": "stormbringer",
+    "name": "Lord Kaelen Stormbringer Thunderbolt Master of High Voltage Lightning and Harbinger of Tempestuous Cataclysms",
+    "elementId": "lightning",
+    "roleId": "vanguard",
+    "imageUrl": "assets/charactercard/Kaelan.jpg"
+  },
+  {
+    "id": "nyx-shadowblade",
+    "name": "Shadowblade Nyx Umbra Soulreaper Sovereign of Nightfall Realm and Whisperer of Void Darkness",
+    "elementId": "dark",
+    "roleId": "shadowAssassin",
+    "imageUrl": "assets/charactercard/Nyx.jpg"
+  }
+]

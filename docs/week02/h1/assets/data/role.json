@@ -1,0 +1,11 @@
+[
+  {"id": "dps", "name": "DPS"},
+  {"id": "support", "name": "Support"},
+  {"id": "striker", "name": "Striker"},
+  {"id": "assassin", "name": "Assassin"},
+  {"id": "mage", "name": "Grand Mage DPS"},
+  {"id": "supremeSupport", "name": "Supreme Support"},
+  {"id": "vanguard", "name": "Striker Vanguard"},
+  {"id": "shadowAssassin", "name": "Shadow Assassin"},
+  {"id": "tank", "name": "Tank"}
+]
